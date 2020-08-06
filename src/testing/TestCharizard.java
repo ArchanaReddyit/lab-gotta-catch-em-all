@@ -1,5 +1,7 @@
 package testing;
 
+import model.Pokemon;
+
 /*
 import static org.junit.Assert.assertEquals;
 
