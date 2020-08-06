@@ -81,32 +81,24 @@ public class PokemonController extends HttpServlet {
 			request.setAttribute("baseExp3", d.getBaseExp());
 		}
 		if (value4 != null) {
-
-			// Create the object for Mew class and use getters to retrieve the values	
-			Mew m= new Mew("Mew",151,"\"\"Mew is a Psychic-type Mythical Pokémon introduced in Generation I. \n" + 
-					"Mew is notable for its unique ability to learn every Technical Machine, Technical Record & Hidden Machine.\"\"","PSYCHIC","NONE","64");
-			msg = "<center>" + m.getPokemonName() + "  #" + m.getPokemonNumber();
-			request.setAttribute("message3",m.getPokemonNumber());
-			request.setAttribute("character3", m.getCharacteristics());
-			request.setAttribute("type3",m.getType());
-			request.setAttribute("evolution3", m.getEvolution());
-			request.setAttribute("baseExp3", m.getBaseExp());
+			Mew m=new Mew("Mew",151,"Mew is a Psychic-type Mythical Pokémon introduced in Generation I. Mew is notable for its unique ability to learn every Technical Machine, Technical Record & Hidden Machine.","PSYCHIC","NONE","64");
+			msg = "<center>" +m.getPokemonName() + "  #" +m.getPokemonNumber();
+			request.setAttribute("message4",m.getPokemonNumber());
+			request.setAttribute("character4",m.getCharacteristics());
+			request.setAttribute("type4",m.getType());
+			request.setAttribute("evolution4",m.getEvolution());
+			request.setAttribute("baseExp4",m.getBaseExp());
 		}
-
 		if (value5 != null) {
-
-			// Create the object for Pikachu class and use getters to retrieve the values	
+			Pikachu p= new Pikachu("Pikachu",25,"Pikachu is an Electric-type Pokémon, which was introduced in Generation I. Over the years, Pikachu has become so popular that it serves as the Pokémon franchise","ELECTRIC","RAICHU","112");
 			
-			Pikachu p= new Pikachu("Pikachu",25,"\"\"Pikachu is an Electric-type Pokémon, which was introduced in Generation I. \n" + 
-					"Over the years, Pikachu has become so popular that it serves as the Pokémon franchise mascot.\"\"","ELECTRIC","RAICHU","112");
-			msg = "<center>" +p.getPokemonName() + "  #" + p.getPokemonNumber();
-			request.setAttribute("message3",p.getPokemonNumber());
-			request.setAttribute("character3", p.getCharacteristics());
-			request.setAttribute("type3",p.getType());
-			request.setAttribute("evolution3", p.getEvolution());
-			request.setAttribute("baseExp3", p.getBaseExp());
+			msg = "<center>" + p.getPokemonName() + "  #" + p.getPokemonNumber();
+			request.setAttribute("message5",p.getPokemonNumber());
+			request.setAttribute("character5",p.getCharacteristics());
+			request.setAttribute("type5",p.getType());
+			request.setAttribute("evolution5",p.getEvolution());
+			request.setAttribute("baseExp5",p.getBaseExp());
 		}
-		
 		
 		RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/WEB-INF/views/pokemon.jsp");
 		rd.forward(request, response);
